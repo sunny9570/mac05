@@ -1,5 +1,5 @@
 body {
-    background: url(../images/disney-elp-hero-bg-dt.webp);
+    background: url(../images/disney-elp-hero-bg-dt.webp)no-repeat center center/cover;
 }
 
 .header {}
@@ -88,6 +88,7 @@ body {
 .header .gnb>ul>li:hover ul {
     opacity: 1;
     visibility: visible;
+    z-index: 999;
 }
 
 .header .gnb>ul>li ul strong {
@@ -97,9 +98,50 @@ body {
     text-align: center;
 }
 
-.main_visual {
-    height: 600px;
+/* #main_academic .inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+} */
 
+/* #main_academic .inner .itm img {
+    width: 100%;
+    height: 21rem;
+
+} */
+.main_visual {
+    /* height: calc(100% - 106px); */
+
+
+}
+
+.main_visual::before {
+    content: "";
+    position: absolute;
+    inset: 106px 0 0 0;
+    background: url(../images/mainvisualbd) no-repeat top center/cover;
+    z-index: 1;
+    animation: visual_move 20s;
+}
+
+@keyframes visual_move {
+    0% {
+        background-position-x: 3000px;
+    }
+
+    100% {
+        background-position-x: 0;
+    }
+}
+
+.main_visual .inner {
+    margin: 106px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.main_visual .inner figure img {
+    width: 100%;
 }
 
 
@@ -148,7 +190,7 @@ body {
 
 .main_content .main_content_slide .order a {
     display: inline-block;
-    background: rgba(221, 160, 221, 0.4);
+    background: rgba(221, 160, 221, 0.3);
     padding: 10px 24px;
     align-items: center;
 
