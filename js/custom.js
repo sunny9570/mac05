@@ -40,6 +40,7 @@ $(function () {
     });
 
     $('.main_banner .itm').on('click', function () {
+
         $(this)
             .addClass('on')
             .siblings()
