@@ -1,8 +1,14 @@
 body {
-    background: url(../images/disney-elp-hero-bg-dt.webp)no-repeat center center/cover;
+    background: url(../images/bodybgblack.webp)no-repeat top center/cover;
 }
 
-.header {}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
 
 .header .inner {
     display: flex;
@@ -111,26 +117,34 @@ body {
 } */
 .main_visual {
     /* height: calc(100% - 106px); */
-
-
+    position: relative;
 }
 
 .main_visual::before {
     content: "";
     position: absolute;
-    inset: 106px 0 0 0;
-    background: url(../images/mainvisualbd) no-repeat top center/cover;
-    z-index: 1;
-    animation: visual_move 20s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid tomato;
+
+
+    background: url(../images/mainvisualbg11.avif) no-repeat center center/100%;
+    z-index: 2;
+    animation: visual_move 1s 2s both;
 }
 
 @keyframes visual_move {
     0% {
-        background-position-x: 3000px;
+        transform: translate(-50%, -50%) scale(0);
     }
 
     100% {
-        background-position-x: 0;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
@@ -190,7 +204,7 @@ body {
 
 .main_content .main_content_slide .order a {
     display: inline-block;
-    background: rgba(221, 160, 221, 0.3);
+    background: rgba(86, 38, 160, 0.6);
     padding: 10px 24px;
     align-items: center;
 
@@ -228,11 +242,15 @@ body {
     color: #fff;
 }
 
+.main_movie {
+    background: url(../images/moviebg.jpg);
+    padding: 100px;
+}
 
 .main_movie .inner {
     display: flex;
     align-items: center;
-    height: 600px;
+
 }
 
 .main_movie .inner>* {
@@ -241,8 +259,110 @@ body {
 
 .main_movie .inner .left {}
 
-.main_movie .inner .left .title {}
+.main_movie .inner .left .title span {
+    display: block;
+    margin: 0 0 16px 0;
+}
+
+.main_movie .inner .left .title h2 {
+    font-size: 48px;
+    margin: 0 0 32px 0;
+}
 
 .main_movie .inner .right .movie {
     width: 160px;
+}
+
+.main_tab {
+    position: relative;
+    background: #333;
+
+}
+
+.main_tab .inner {
+    position: relative;
+}
+
+.main_tab .inner .tab_itm figure {
+    display: none;
+}
+
+.main_tab .inner .tab_itm figure.on {
+    display: block;
+}
+
+.main_tab .inner img {
+    height: 600px;
+}
+
+.main_tab .inner .tab_menu {
+    display: flex;
+}
+
+.main_tab .inner .tab_menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+
+
+.main_tab .inner .tab_menu button {
+    /* position: absolute; */
+}
+
+.main_tab .inner .tab_menu .left {}
+
+.main_tab .inner .tab_menu .right {
+    right: 0;
+}
+
+.main_tab .inner button {
+    height: 600px;
+    background: palevioletred;
+    color: #fff;
+    padding: 0 32px;
+}
+
+
+.main_banner {
+    padding: 200px 0;
+}
+
+.main_banner .inner {
+    display: flex;
+
+}
+
+.main_banner .itm {
+    flex: 0 0 80px;
+    overflow: hidden;
+}
+
+.main_banner .itm.on {
+    flex: 1 0 80px;
+}
+
+.main_banner .itm .case {
+    display: flex;
+    height: 480px;
+}
+
+.main_banner .itm .case .btn {
+    width: 80px;
+    color: #fff;
+    background: #f00;
+    writing-mode: vertical-lr;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.main_banner .itm .case .con {
+    flex: 3;
+    overflow: hidden;
+    white-space: nowrap;
 }

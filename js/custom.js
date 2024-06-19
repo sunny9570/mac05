@@ -28,5 +28,23 @@ $(function () {
         },
     });
 
+    $('.main_tab .inner .tab_menu button').on('click', function () {
+        let idx = $(this).parent().index();//0,1
+        $('.main_tab  .inner .tab_itm figure')
+            .eq(idx)
+            .addClass('on')
+            .siblings()
+            .removeClass('on')
+
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    });
+
+    $('.main_banner .itm').on('click', function () {
+        $(this)
+            .addClass('on')
+            .siblings()
+            .removeClass('on')
+    })
+
     AOS.init();
 })
