@@ -130,10 +130,10 @@ body {
     width: 100%;
     height: 100%;
 
-    border: 1px solid tomato;
 
 
-    background: url(../images/mainvisualbg11.avif) no-repeat center center/100%;
+
+    background: url(../images/newbig_img011.avif) no-repeat center top/100%;
     z-index: 2;
     animation: visual_move 1s 2s both;
 }
@@ -433,4 +433,111 @@ body {
 
 .main_banner .itm .case .con img {
     width: 100%;
+}
+
+.footer {
+    padding: 50px 0;
+}
+
+.footer .ft {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.3);
+    padding: 0 0 32px 0;
+}
+
+.footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .inner .store_box p {
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    color: #ddd;
+}
+
+.footer .inner .store_box input[type="text"] {
+    outline: none;
+    border: none;
+    border: 1px solid #ddd;
+    padding: 4px;
+    width: 120px;
+    background: black;
+}
+
+.footer .inner .store_box button i {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.footer .inner span {
+    display: block;
+    color: #898989;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.footer .inner li {
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.footer .inner .utils_list {
+    display: flex;
+    gap: 16px;
+    margin: 0 0 16px 0;
+}
+
+.footer .inner i {
+    color: #ddd;
+    font-size: 24px;
+}
+
+.footer .inner #f_lnk {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px 24px;
+    background: rgba(221, 160, 221, 0.4);
+    color: #fff;
+}
+
+.footer .inner #f_lnk option {
+    background: rgb(221, 160, 221);
+    color: #fff;
+}
+
+.footer .fb {
+    padding: 32px 0 0 0;
+}
+
+.footer .fb .customer {
+    display: flex;
+    gap: 32px;
+}
+
+.footer .fb .customer li {
+    position: relative;
+}
+
+.footer .fb .customer li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 2px;
+    height: 9px;
+    background: #898989;
+}
+
+.footer .fb .customer .b {
+    color: plum;
+}
+
+.footer .fb address {
+    color: #898989;
+    font-size: 14px;
+    font-weight: 400;
 }
